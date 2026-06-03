@@ -1,0 +1,11 @@
+node_modules
+.cache
+.nuxt
+.output
+.data
+dist
+.env
+*.log
+.DS_Store
+.playwright-mcp
+*.png
