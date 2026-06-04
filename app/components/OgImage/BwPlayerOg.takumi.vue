@@ -21,7 +21,7 @@ withDefaults(
       height: 630px;
       padding: 72px;
       background: linear-gradient(160deg, #faf9fe 0%, #f4f3f8 55%, #e3e2e7 100%);
-      font-family: Newsreader, Georgia, serif;
+      font-family: Newsreader, serif;
       color: #1a1b1f;
     "
   >
@@ -63,10 +63,10 @@ withDefaults(
       </p>
     </div>
     <div style="display: flex; align-items: center; justify-content: space-between">
-      <p style="margin: 0; font-size: 28px; font-weight: 600; letter-spacing: -0.02em; font-family: 'DM Sans', system-ui, sans-serif">
+      <p style="margin: 0; font-size: 28px; font-weight: 600; letter-spacing: -0.02em; font-family: 'DM Sans', sans-serif">
         BW Player
       </p>
-      <p style="margin: 0; font-size: 20px; color: #4c4546; font-family: 'DM Sans', system-ui, sans-serif">
+      <p style="margin: 0; font-size: 20px; color: #4c4546; font-family: 'DM Sans', sans-serif">
         Android · iOS · macOS
       </p>
     </div>

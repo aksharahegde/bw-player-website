@@ -1,3 +1,6 @@
+/** Prerendered OG asset in public/og/ (regenerate via dev server + /_og/… when copy changes). */
+export const landingOgImagePath = '/og/bw-player.png'
+
 export const landingSeo = {
   title: 'BW Player | Monochrome music, full color when it plays',
   description:
@@ -24,10 +27,19 @@ export const landingHero = {
   subhead: 'Stream. Mix. Queue. Let the artwork breathe.',
   primaryCta: 'Get the app',
   secondaryCta: 'See the features',
-  mockupLabel: 'Discover: trending now, one tap away',
+  mockupImage: '/mockups/now-playing-overview.png',
+  mockupLabel: 'Light and dark mode',
 } as const
 
 export const landingPlatforms = ['Android', 'iOS', 'macOS'] as const
+
+export type MockScreen = 'discover' | 'smart-mix' | 'now-playing' | 'library'
+
+/** Screenshots in public/mockups/ — omit screens that still use Vue placeholders */
+export const landingMockupImages: Partial<Record<MockScreen, string>> = {
+  discover: '/mockups/main-screen.png',
+  'now-playing': '/mockups/light-now-playing.png',
+}
 
 export type FeatureId = 'discover' | 'smart-mix' | 'now-playing' | 'library' | 'design'
 
@@ -35,7 +47,7 @@ export type LandingFeature = {
   id: FeatureId
   title: string
   line: string
-  screen?: 'discover' | 'smart-mix' | 'now-playing' | 'library'
+  screen?: MockScreen
 }
 
 export const landingFeatures: LandingFeature[] = [

@@ -9,4 +9,6 @@ dist
 .DS_Store
 .playwright-mcp
 *.png
+!public/mockups/*.png
+!public/og/*.png
 .vercel

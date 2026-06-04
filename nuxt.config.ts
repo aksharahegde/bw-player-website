@@ -2,7 +2,13 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
-  modules: ['@nuxtjs/seo'],
+  modules: ['@nuxtjs/seo', '@nuxt/fonts'],
+  fonts: {
+    families: [
+      { name: 'DM Sans', weights: [400, 600] },
+      { name: 'Newsreader', weights: [600, 700] },
+    ],
+  },
   css: ['~/assets/css/main.css'],
   runtimeConfig: {
     public: {
@@ -45,19 +51,7 @@ export default defineNuxtConfig({
   },
   ogImage: {
     enabled: true,
-    defaults: {
-      renderer: 'satori',
-      width: 1200,
-      height: 630,
-      extension: 'png',
-      component: 'BwPlayerOg',
-    },
-    fonts: [
-      'DM Sans:400',
-      'DM Sans:600',
-      'Newsreader:600',
-      'Newsreader:700',
-    ],
+    zeroRuntime: true,
   },
   vite: {
     plugins: [tailwindcss()],

@@ -7,6 +7,7 @@ import {
   landingHero,
   landingMoods,
   landingNav,
+  landingOgImagePath,
   landingPlatforms,
   landingSources,
 } from '~/content/landing'
@@ -26,17 +27,7 @@ useLandingAnime()
 
 const logoUrl = computed(() => `${siteUrl.value}/favicon.svg`)
 
-const ogImagePaths = defineOgImage('BwPlayerOg', {
-  title: seo.ogTitle,
-  description: seo.ogDescription,
-})
-
-const ogImageUrl = computed(() => {
-  const path = ogImagePaths[0]
-  if (!path) return ''
-  if (path.startsWith('http')) return path
-  return `${siteUrl.value}${path.startsWith('/') ? path : `/${path}`}`
-})
+const ogImageUrl = computed(() => `${siteUrl.value}${landingOgImagePath}`)
 
 useSeoMeta({
   title: seo.title,
@@ -45,10 +36,12 @@ useSeoMeta({
   keywords: seo.keywords,
   ogTitle: seo.ogTitle,
   ogDescription: seo.ogDescription,
+  ogImage: ogImageUrl,
   ogImageAlt: seo.ogImageAlt,
   ogLocale: 'en_US',
   ogType: 'website',
   twitterCard: 'summary_large_image',
+  twitterImage: ogImageUrl,
   twitterTitle: seo.twitterTitle,
   twitterDescription: seo.twitterDescription,
   twitterSite: twitterSite.value || undefined,
@@ -169,8 +162,10 @@ useSchemaOrg([
         </ul>
       </div>
       <LandingAppMockup
-        screen="discover"
+        screen="now-playing"
         variant="hero"
+        presentation="overview"
+        :image-src="landingHero.mockupImage"
         :caption="landingHero.mockupLabel"
         test-id="landing-hero-mockup"
       />
