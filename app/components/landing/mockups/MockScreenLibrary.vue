@@ -1,30 +1,72 @@
 <template>
-  <div class="bw-mock-ui">
-    <div style="font-weight: 700; font-size: 10px; margin-bottom: 4px">Library</div>
-    <div style="display: flex; gap: 4px; margin-bottom: 6px">
-      <span
-        style="font-size: 5px; padding: 3px 8px; border-radius: 99px; background: #000; color: #fff"
-      >Recents</span>
-      <span
-        style="font-size: 5px; padding: 3px 8px; border-radius: 99px; background: #f4f3f8"
-      >Favorites</span>
+  <div class="bw-mock-ui bw-mock-ui--library">
+    <div class="bw-mock-field">
+      Search playlists and tracks…
     </div>
-    <div
-      v-for="i in 3"
-      :key="i"
-      class="bw-mock-row"
-      style="margin-bottom: 5px"
-    >
-      <div class="bw-mock-thumb" />
-      <div style="flex: 1">
-        <div class="bw-mock-bar" style="width: 75%; margin-bottom: 3px" />
-        <div class="bw-mock-bar" style="width: 50%; height: 5px" />
+    <p class="bw-mock-eyebrow">
+      On device
+    </p>
+    <p class="bw-mock-title">
+      Your Library
+    </p>
+    <div class="bw-mock-tabs">
+      <span class="bw-mock-tag is-active">Recents</span>
+      <span class="bw-mock-tag">Favorites</span>
+      <span class="bw-mock-tag">Playlists</span>
+    </div>
+    <div class="bw-mock-stats">
+      <div class="bw-mock-stat">
+        <span class="bw-mock-stat__value">12</span>
+        <span class="bw-mock-stat__label">Playlists</span>
+      </div>
+      <div class="bw-mock-stat">
+        <span class="bw-mock-stat__value">248</span>
+        <span class="bw-mock-stat__label">Tracks</span>
+      </div>
+      <div class="bw-mock-stat">
+        <span class="bw-mock-stat__value">18h</span>
+        <span class="bw-mock-stat__label">Saved</span>
       </div>
     </div>
-    <div class="bw-mock-card" style="margin-top: auto">
-      <div style="font-weight: 600">+ Create playlist</div>
+    <p class="bw-mock-section-label">
+      Pinned
+    </p>
+    <div class="bw-mock-grid">
+      <div class="bw-mock-playlist">
+        <div class="bw-mock-playlist__art" />
+        <span class="bw-mock-playlist__name">Night Drive</span>
+        <span class="bw-mock-playlist__meta">24 tracks</span>
+      </div>
+      <div class="bw-mock-playlist">
+        <div class="bw-mock-playlist__art bw-mock-playlist__art--dark" />
+        <span class="bw-mock-playlist__name">Focus Flow</span>
+        <span class="bw-mock-playlist__meta">18 tracks</span>
+      </div>
     </div>
-    <nav class="bw-mock-nav" aria-hidden="true">
+    <p class="bw-mock-section-label">
+      Recently played
+    </p>
+    <div class="bw-mock-queue">
+      <div class="bw-mock-row">
+        <div class="bw-mock-thumb" />
+        <div class="bw-mock-lines">
+          <span class="bw-mock-line bw-mock-line--title" />
+          <span class="bw-mock-line bw-mock-line--short" />
+        </div>
+      </div>
+      <div class="bw-mock-row">
+        <div class="bw-mock-thumb" />
+        <div class="bw-mock-lines">
+          <span class="bw-mock-line bw-mock-line--title" />
+          <span class="bw-mock-line" />
+        </div>
+      </div>
+    </div>
+    <span class="bw-mock-pill bw-mock-pill--block">+ Create playlist</span>
+    <nav
+      class="bw-mock-nav"
+      aria-hidden="true"
+    >
       <span />
       <span />
       <span class="is-active" />

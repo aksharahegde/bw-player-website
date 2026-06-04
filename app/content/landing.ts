@@ -35,11 +35,8 @@ export const landingPlatforms = ['Android', 'iOS', 'macOS'] as const
 
 export type MockScreen = 'discover' | 'smart-mix' | 'now-playing' | 'library'
 
-/** Screenshots in public/mockups/ — omit screens that still use Vue placeholders */
-export const landingMockupImages: Partial<Record<MockScreen, string>> = {
-  discover: '/mockups/main-screen.png',
-  'now-playing': '/mockups/light-now-playing.png',
-}
+/** Screenshots in public/mockups/ — omit screens that use Vue placeholders */
+export const landingMockupImages: Partial<Record<MockScreen, string>> = {}
 
 export type FeatureId = 'discover' | 'smart-mix' | 'now-playing' | 'library' | 'design'
 

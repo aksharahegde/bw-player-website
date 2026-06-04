@@ -948,6 +948,202 @@
   text-transform: uppercase;
 }
 
+/* Library — denser, larger UI to fill compact phone frame */
+.bw-mock-ui--library {
+  gap: 7px;
+  font-size: 10px;
+  line-height: 1.3;
+}
+
+.bw-mock-ui--library .bw-mock-nav {
+  margin-top: 8px;
+  padding-top: 10px;
+}
+
+.bw-mock-ui--library .bw-mock-nav span {
+  width: 18px;
+  height: 18px;
+}
+
+.bw-mock-ui--library .bw-mock-field {
+  font-size: 9px;
+  padding: 9px 10px;
+  border-radius: 10px;
+}
+
+.bw-mock-ui--library .bw-mock-eyebrow {
+  margin: 0;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-ink-3);
+}
+
+.bw-mock-ui--library .bw-mock-title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.bw-mock-ui--library .bw-mock-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.bw-mock-ui--library .bw-mock-tag {
+  font-size: 8px;
+  font-weight: 600;
+  padding: 5px 9px;
+  border-radius: var(--radius-pill);
+  background: var(--color-paper-2);
+  color: var(--color-ink-2);
+}
+
+.bw-mock-ui--library .bw-mock-tag.is-active {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.bw-mock-ui--library .bw-mock-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.bw-mock-ui--library .bw-mock-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 8px 4px;
+  border-radius: 10px;
+  background: var(--color-paper-2);
+  border: 1px solid var(--color-rule);
+}
+
+.bw-mock-ui--library .bw-mock-stat__value {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.bw-mock-ui--library .bw-mock-stat__label {
+  font-size: 7px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-ink-3);
+}
+
+.bw-mock-ui--library .bw-mock-section-label {
+  margin: 0;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-ink-3);
+}
+
+.bw-mock-ui--library .bw-mock-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.bw-mock-ui--library .bw-mock-playlist {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 7px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.bw-mock-ui--library .bw-mock-playlist__art {
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  border-radius: 8px;
+  background: linear-gradient(145deg, #4c4546, #1a1b1f);
+}
+
+.bw-mock-ui--library .bw-mock-playlist__art--dark {
+  background: linear-gradient(145deg, #1a1b1f, #4c4546);
+}
+
+.bw-mock-ui--library .bw-mock-playlist__art--warm {
+  background: linear-gradient(145deg, #e3e2e7, #4c4546);
+}
+
+.bw-mock-ui--library .bw-mock-playlist__art--cool {
+  background: linear-gradient(145deg, #f4f3f8, #1a1b1f);
+}
+
+.bw-mock-ui--library .bw-mock-playlist__name {
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.bw-mock-ui--library .bw-mock-playlist__meta {
+  font-size: 8px;
+  color: var(--color-ink-3);
+}
+
+.bw-mock-ui--library .bw-mock-queue {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 10px;
+  background: var(--color-paper-2);
+}
+
+.bw-mock-ui--library .bw-mock-thumb {
+  width: 38px;
+  height: 38px;
+  border-radius: 9px;
+}
+
+.bw-mock-ui--library .bw-mock-lines {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  justify-content: center;
+}
+
+.bw-mock-ui--library .bw-mock-line {
+  display: block;
+  height: 10px;
+  border-radius: 5px;
+  background: var(--color-paper-2);
+  width: 88%;
+}
+
+.bw-mock-ui--library .bw-mock-line--title {
+  width: 72%;
+  background: var(--color-rule);
+}
+
+.bw-mock-ui--library .bw-mock-line--short {
+  width: 52%;
+}
+
+.bw-mock-ui--library .bw-mock-pill--block {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 10px;
+  padding: 10px 12px;
+  letter-spacing: 0.08em;
+}
+
 @media (min-width: 52rem) {
   .bw-showcase-spotlight .bw-mockup--hero {
     max-width: 260px;
@@ -969,8 +1165,668 @@
   padding: 20px 6px 6px;
 }
 
-.bw-mockup--compact:has(.bw-mock-ui--smart-mix) .bw-mockup__screen {
+.bw-mockup--compact:has(.bw-mock-ui--smart-mix) .bw-mockup__screen,
+.bw-mockup--compact:has(.bw-mock-ui--library) .bw-mockup__screen {
   padding: 18px 8px 8px;
+}
+
+.bw-mockup--compact:has(.bw-mock-ui--now-playing) .bw-mockup__notch {
+  display: none;
+}
+
+.bw-mockup--compact:has(.bw-mock-ui--now-playing) .bw-mockup__screen {
+  padding: 10px 6px 6px;
+}
+
+/* Now Playing — matches app screenshot layout */
+.bw-mock-ui--now-playing {
+  height: 100%;
+  min-height: 100%;
+  gap: 6px;
+  font-size: 10px;
+  line-height: 1.3;
+}
+
+.bw-mock-ui--now-playing .bw-mock-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.bw-mock-ui--now-playing .bw-mock-brand {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-width: 0;
+}
+
+.bw-mock-ui--now-playing .bw-mock-brand__mark {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  background:
+    radial-gradient(circle at 30% 35%, var(--color-primary) 0 1.5px, transparent 1.6px),
+    radial-gradient(circle at 70% 65%, var(--color-primary) 0 1.5px, transparent 1.6px);
+  flex-shrink: 0;
+}
+
+.bw-mock-ui--now-playing .bw-mock-brand__name {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.bw-mock-ui--now-playing .bw-mock-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-rule);
+  flex-shrink: 0;
+  position: relative;
+}
+
+.bw-mock-ui--now-playing .bw-mock-icon--search::after {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border: 1.5px solid var(--color-ink-2);
+  border-radius: 50%;
+}
+
+.bw-mock-ui--now-playing .bw-mock-topbar,
+.bw-mock-ui--now-playing .bw-mock-title,
+.bw-mock-ui--now-playing .bw-mock-subtitle,
+.bw-mock-ui--now-playing .bw-mock-pill--playlist,
+.bw-mock-ui--now-playing .bw-mock-player-card,
+.bw-mock-ui--now-playing .bw-mock-section-label {
+  flex-shrink: 0;
+}
+
+.bw-mock-ui--now-playing .bw-mock-visual {
+  display: flex;
+  flex: 3 1 0;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: var(--color-paper-2);
+}
+
+.bw-mock-ui--now-playing .bw-mock-wave {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  gap: 4px;
+  align-items: flex-end;
+}
+
+.bw-mock-ui--now-playing .bw-mock-wave span {
+  flex: 1;
+  max-width: 10px;
+  width: auto;
+  min-height: 4px;
+  background: var(--color-primary);
+  border-radius: 3px;
+}
+
+.bw-mock-ui--now-playing .bw-mock-wave span:nth-child(1) { height: 38%; }
+.bw-mock-ui--now-playing .bw-mock-wave span:nth-child(2) { height: 62%; }
+.bw-mock-ui--now-playing .bw-mock-wave span:nth-child(3) { height: 48%; }
+.bw-mock-ui--now-playing .bw-mock-wave span:nth-child(4) { height: 88%; }
+.bw-mock-ui--now-playing .bw-mock-wave span:nth-child(5) { height: 55%; }
+.bw-mock-ui--now-playing .bw-mock-wave span:nth-child(6) { height: 72%; }
+.bw-mock-ui--now-playing .bw-mock-wave span:nth-child(7) { height: 42%; }
+.bw-mock-ui--now-playing .bw-mock-wave span:nth-child(8) { height: 68%; }
+.bw-mock-ui--now-playing .bw-mock-wave span:nth-child(9) { height: 50%; }
+
+.bw-mock-ui--now-playing .bw-mock-title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.bw-mock-ui--now-playing .bw-mock-subtitle {
+  margin: 0;
+  font-size: 9px;
+  color: var(--color-ink-2);
+  text-align: center;
+}
+
+.bw-mock-ui--now-playing .bw-mock-pill--playlist {
+  display: block;
+  width: fit-content;
+  margin-inline: auto;
+  font-size: 8px;
+  padding: 7px 12px;
+  letter-spacing: 0.02em;
+}
+
+.bw-mock-ui--now-playing .bw-mock-player-card {
+  padding: 10px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.bw-mock-ui--now-playing .bw-mock-progress {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.bw-mock-ui--now-playing .bw-mock-progress__time {
+  font-size: 7px;
+  font-weight: 600;
+  color: var(--color-ink-3);
+  flex-shrink: 0;
+}
+
+.bw-mock-ui--now-playing .bw-mock-progress .bw-mock-slider {
+  flex: 1;
+  height: 4px;
+  border-radius: 2px;
+}
+
+.bw-mock-ui--now-playing .bw-mock-transport {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.bw-mock-ui--now-playing .bw-mock-transport__btn {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-rule);
+  flex-shrink: 0;
+}
+
+.bw-mock-ui--now-playing .bw-mock-transport__btn--play {
+  width: 34px;
+  height: 34px;
+  border: none;
+  background: var(--color-primary);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  position: relative;
+}
+
+.bw-mock-ui--now-playing .bw-mock-transport__btn--play::before,
+.bw-mock-ui--now-playing .bw-mock-transport__btn--play::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 3px;
+  height: 12px;
+  margin-top: -6px;
+  border-radius: 1px;
+  background: var(--color-on-primary);
+}
+
+.bw-mock-ui--now-playing .bw-mock-transport__btn--play::before {
+  left: 11px;
+}
+
+.bw-mock-ui--now-playing .bw-mock-transport__btn--play::after {
+  right: 11px;
+}
+
+.bw-mock-ui--now-playing .bw-mock-section-label {
+  margin: 0;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-ink-3);
+}
+
+.bw-mock-ui--now-playing .bw-mock-queue {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  min-height: 0;
+  padding: 8px;
+  border-radius: 10px;
+  background: var(--color-paper-2);
+}
+
+.bw-mock-ui--now-playing .bw-mock-thumb {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+}
+
+.bw-mock-ui--now-playing .bw-mock-lines {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+}
+
+.bw-mock-ui--now-playing .bw-mock-line {
+  display: block;
+  height: 9px;
+  border-radius: 5px;
+  background: var(--color-paper-2);
+  width: 88%;
+}
+
+.bw-mock-ui--now-playing .bw-mock-line--title {
+  width: 68%;
+  background: var(--color-rule);
+}
+
+.bw-mock-ui--now-playing .bw-mock-line--short {
+  width: 48%;
+}
+
+.bw-mock-ui--now-playing .bw-mock-tabnav {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: space-around;
+  gap: 4px;
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 1px solid var(--color-rule);
+}
+
+.bw-mock-ui--now-playing .bw-mock-tabnav span {
+  font-size: 7px;
+  font-weight: 600;
+  color: var(--color-ink-3);
+  text-align: center;
+}
+
+.bw-mock-ui--now-playing .bw-mock-tabnav span.is-active {
+  color: var(--color-primary);
+}
+
+.bw-mockup--hero:has(.bw-mock-ui--discover) .bw-mockup__notch,
+.bw-mockup--compact:has(.bw-mock-ui--discover) .bw-mockup__notch {
+  display: none;
+}
+
+.bw-mockup--hero:has(.bw-mock-ui--discover) .bw-mockup__screen,
+.bw-mockup--compact:has(.bw-mock-ui--discover) .bw-mockup__screen {
+  padding: 10px 6px 6px;
+}
+
+/* Discover — matches app screenshot layout */
+.bw-mock-ui--discover {
+  height: 100%;
+  min-height: 100%;
+  gap: 6px;
+  font-size: 10px;
+  line-height: 1.3;
+}
+
+.bw-mock-ui--discover .bw-mock-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.bw-mock-ui--discover .bw-mock-brand {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-width: 0;
+}
+
+.bw-mock-ui--discover .bw-mock-brand__mark {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  background:
+    radial-gradient(circle at 30% 35%, var(--color-primary) 0 1.5px, transparent 1.6px),
+    radial-gradient(circle at 70% 65%, var(--color-primary) 0 1.5px, transparent 1.6px);
+  flex-shrink: 0;
+}
+
+.bw-mock-ui--discover .bw-mock-brand__name {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.bw-mock-ui--discover .bw-mock-topbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.bw-mock-ui--discover .bw-mock-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-rule);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.bw-mock-ui--discover .bw-mock-icon--search::after {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border: 1.5px solid var(--color-ink-2);
+  border-radius: 50%;
+}
+
+.bw-mock-ui--discover .bw-mock-avatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  font-size: 9px;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.bw-mock-ui--discover .bw-mock-featured {
+  display: flex;
+  flex: 2 1 0;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 0;
+  padding: 14px 14px 16px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.bw-mock-ui--discover .bw-mock-featured__eyebrow {
+  margin: 0 0 6px;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-ink-3);
+}
+
+.bw-mock-ui--discover .bw-mock-featured__title {
+  margin: 0 0 4px;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.bw-mock-ui--discover .bw-mock-featured__artist {
+  margin: 0 0 14px;
+  font-size: 10px;
+  color: var(--color-ink-2);
+}
+
+.bw-mock-ui--discover .bw-mock-pill--listen {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 8px;
+  padding: 7px 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.bw-mock-ui--discover .bw-mock-pill--listen::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 6px solid var(--color-on-primary);
+}
+
+.bw-mock-ui--discover .bw-mock-moods {
+  flex-shrink: 0;
+}
+
+.bw-mock-ui--discover .bw-mock-moods__title {
+  margin: 0 0 3px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.bw-mock-ui--discover .bw-mock-moods__hint {
+  margin: 0 0 8px;
+  font-size: 6.5px;
+  color: var(--color-ink-3);
+  line-height: 1.4;
+}
+
+.bw-mock-ui--discover .bw-mock-mood-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.bw-mock-ui--discover .bw-mock-mood-card {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0 0 8px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.bw-mock-ui--discover .bw-mock-mood-card__icon {
+  width: 100%;
+  height: 42px;
+  position: relative;
+}
+
+.bw-mock-ui--discover .bw-mock-mood-card__icon--focus {
+  background: var(--color-paper-2);
+}
+
+.bw-mock-ui--discover .bw-mock-mood-card__icon--focus::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  width: 24px;
+  height: 15px;
+  margin: -8px 0 0 -12px;
+  border: 2px solid var(--color-primary);
+  border-radius: 3px;
+  background: #fff;
+}
+
+.bw-mock-ui--discover .bw-mock-mood-card__icon--focus::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 7px;
+  width: 30px;
+  height: 2px;
+  margin-left: -15px;
+  background: var(--color-rule);
+  border-radius: 1px;
+}
+
+.bw-mock-ui--discover .bw-mock-mood-card__icon--energy {
+  background: #fff;
+}
+
+.bw-mock-ui--discover .bw-mock-mood-card__icon--energy::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 22px;
+  height: 22px;
+  margin: -11px 0 0 -11px;
+  background:
+    linear-gradient(32deg, transparent 47%, var(--color-primary) 47%, var(--color-primary) 53%, transparent 53%),
+    linear-gradient(-32deg, transparent 47%, var(--color-primary) 47%, var(--color-primary) 53%, transparent 53%),
+    linear-gradient(90deg, transparent 47%, var(--color-primary) 47%, var(--color-primary) 53%, transparent 53%),
+    linear-gradient(0deg, transparent 47%, var(--color-primary) 47%, var(--color-primary) 53%, transparent 53%);
+}
+
+.bw-mock-ui--discover .bw-mock-mood-card__name,
+.bw-mock-ui--discover .bw-mock-mood-card__meta {
+  padding-inline: 8px;
+}
+
+.bw-mock-ui--discover .bw-mock-mood-card__name {
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.bw-mock-ui--discover .bw-mock-mood-card__meta {
+  font-size: 6.5px;
+  color: var(--color-ink-3);
+  line-height: 1.25;
+}
+
+.bw-mock-ui--discover .bw-mock-trending {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  min-height: 0;
+  gap: 6px;
+}
+
+.bw-mock-ui--discover .bw-mock-trending__title {
+  margin: 0;
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.bw-mock-ui--discover .bw-mock-trending__list {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  min-height: 0;
+}
+
+.bw-mock-ui--discover .bw-mock-trending-row {
+  gap: 8px;
+}
+
+.bw-mock-ui--discover .bw-mock-thumb {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: var(--color-rule);
+  flex-shrink: 0;
+}
+
+.bw-mock-ui--discover .bw-mock-thumb--star {
+  background: var(--color-paper-2);
+  border: 1px solid var(--color-rule);
+  position: relative;
+}
+
+.bw-mock-ui--discover .bw-mock-thumb--star::before {
+  content: '✦';
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  color: var(--color-primary);
+}
+
+.bw-mock-ui--discover .bw-mock-lines {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  justify-content: center;
+  min-width: 0;
+}
+
+.bw-mock-ui--discover .bw-mock-track {
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.bw-mock-ui--discover .bw-mock-artist {
+  font-size: 7px;
+  color: var(--color-ink-3);
+}
+
+.bw-mock-ui--discover .bw-mock-line {
+  display: block;
+  height: 8px;
+  border-radius: 4px;
+  background: var(--color-rule);
+  width: 62%;
+}
+
+.bw-mock-ui--discover .bw-mock-line--title {
+  width: 52%;
+}
+
+.bw-mock-ui--discover .bw-mock-line--short {
+  width: 38%;
+}
+
+.bw-mock-ui--discover .bw-mock-play-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-rule);
+  background: #fff;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.bw-mock-ui--discover .bw-mock-play-btn::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  margin: -5px 0 0 -3px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 7px solid var(--color-primary);
+}
+
+.bw-mock-ui--discover .bw-mock-tabnav {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: space-around;
+  gap: 4px;
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 1px solid var(--color-rule);
+}
+
+.bw-mock-ui--discover .bw-mock-tabnav span {
+  font-size: 7px;
+  font-weight: 600;
+  color: var(--color-ink-3);
+  text-align: center;
+}
+
+.bw-mock-ui--discover .bw-mock-tabnav span.is-active {
+  color: var(--color-primary);
 }
 
 @media (max-width: 39.9375rem) {
