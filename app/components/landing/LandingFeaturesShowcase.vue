@@ -12,6 +12,7 @@ import {
     <article
       class="bw-showcase-spotlight"
       data-testid="landing-feature-discover"
+      data-animate="reveal hover"
     >
       <div class="bw-showcase-spotlight__copy">
         <span class="bw-index">01</span>
@@ -36,6 +37,8 @@ import {
         :key="feature.id"
         class="bw-showcase-tile"
         :data-testid="`landing-feature-${feature.id}`"
+        data-animate="reveal hover"
+        :data-animate-delay="(index + 1) * 80"
       >
         <LandingAppMockup
           v-if="feature.screen"
@@ -58,6 +61,7 @@ import {
     <article
       class="bw-showcase-statement"
       data-testid="landing-feature-design"
+      data-animate="reveal"
     >
       <span class="bw-showcase-statement__index">05</span>
       <h3 class="bw-showcase-statement__title">

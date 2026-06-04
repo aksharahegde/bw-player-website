@@ -22,6 +22,8 @@ const {
   twitterSite,
 } = useLandingSeo()
 
+useLandingAnime()
+
 const logoUrl = computed(() => `${siteUrl.value}/favicon.svg`)
 
 const ogImagePaths = defineOgImage('BwPlayerOg', {
@@ -124,6 +126,7 @@ useSchemaOrg([
           <a
             href="#download"
             class="bw-nav-cta"
+            data-animate="press"
           >{{ landingNav.cta }}</a>
         </div>
       </div>
@@ -148,10 +151,12 @@ useSchemaOrg([
             href="#download"
             class="bw-btn bw-btn--primary"
             data-testid="landing-hero-download"
+            data-animate="press"
           >{{ landingHero.primaryCta }}</a>
           <a
             href="#features"
             class="bw-btn bw-btn--secondary"
+            data-animate="press"
           >{{ landingHero.secondaryCta }}</a>
         </div>
         <ul class="bw-hero-platforms">
@@ -198,11 +203,13 @@ useSchemaOrg([
       </div>
       <div class="bw-moods">
         <article
-          v-for="mood in landingMoods"
+          v-for="(mood, index) in landingMoods"
           :key="mood.id"
           class="bw-mood-card"
           :class="`bw-mood-card--${mood.id}`"
           :data-testid="`landing-mood-${mood.id}`"
+          data-animate="reveal hover"
+          :data-animate-delay="index * 60"
         >
           <div
             class="bw-mood-card__art"
@@ -226,10 +233,12 @@ useSchemaOrg([
       </div>
       <div class="bw-sources">
         <article
-          v-for="source in landingSources.items"
+          v-for="(source, index) in landingSources.items"
           :key="source.id"
           class="bw-source-card"
           :data-testid="`landing-source-${source.id}`"
+          data-animate="reveal hover"
+          :data-animate-delay="index * 60"
         >
           <h3 class="bw-source-card__brand">
             <img
@@ -255,7 +264,10 @@ useSchemaOrg([
       class="bw-content bw-section bw-section--tight"
       data-testid="landing-download-cta"
     >
-      <div class="bw-download">
+      <div
+        class="bw-download"
+        data-animate="reveal"
+      >
         <h2 class="bw-section-title">
           {{ landingDownload.headline }}
         </h2>
@@ -266,14 +278,17 @@ useSchemaOrg([
           <a
             href="#"
             class="bw-btn bw-btn--primary"
+            data-animate="press"
           >{{ landingDownload.android }}</a>
           <a
             href="#"
             class="bw-btn bw-btn--secondary"
+            data-animate="press"
           >{{ landingDownload.ios }}</a>
           <a
             href="#"
             class="bw-btn bw-btn--secondary"
+            data-animate="press"
           >{{ landingDownload.macos }}</a>
         </div>
       </div>
@@ -282,6 +297,19 @@ useSchemaOrg([
     <footer class="bw-content bw-footer">
       <p>© {{ year }} BW Player</p>
       <p>{{ landingFooter.tagline }}</p>
+      <p class="bw-footer__credit">
+        {{ landingFooter.builtBy.prefix }}
+        <span
+          class="bw-footer__heart"
+          aria-hidden="true"
+        >♥</span>
+        {{ landingFooter.builtBy.by }}
+        <a
+          :href="landingFooter.builtBy.authorUrl"
+          class="bw-footer__link"
+          rel="noopener noreferrer"
+        >{{ landingFooter.builtBy.author }}</a>
+      </p>
     </footer>
   </div>
 </template>

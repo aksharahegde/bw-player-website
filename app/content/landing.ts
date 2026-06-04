@@ -117,4 +117,10 @@ export const landingDownload = {
 
 export const landingFooter = {
   tagline: 'Monochrome music player.',
+  builtBy: {
+    prefix: 'Built with',
+    by: 'by',
+    author: 'Akshara Hegde',
+    authorUrl: 'https://akshara.dev',
+  },
 } as const

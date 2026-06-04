@@ -124,3 +124,4 @@ Short, catchy phrases per section. Mirror in `app/content/landing.ts`.
 
 - **Copyright:** © {year} BW Player
 - **Tagline:** Monochrome music player.
+- **Credit:** Built with ♥ by [Akshara Hegde](https://akshara.dev)
