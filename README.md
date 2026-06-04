@@ -91,6 +91,10 @@ LANDING_CONTENT.md             # Human-editable copy mirror (keep in sync with l
 
 ### App mockups
 
+#### Hero (light + dark overview)
+
+![BW Player Now Playing overview — light and dark mode](./public/mockups/now-playing-overview.png)
+
 | Placement | Type | Source |
 | --- | --- | --- |
 | **Hero** | Screenshot (overview) | [`public/mockups/now-playing-overview.png`](./public/mockups/now-playing-overview.png) — light and dark Now Playing side-by-side. Set via `landingHero.mockupImage` in [`app/content/landing.ts`](./app/content/landing.ts); rendered with `LandingAppMockup` (`presentation="overview"`, caption from `landingHero.mockupLabel`). |
