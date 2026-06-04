@@ -79,7 +79,8 @@ app/
     OgImage/BwPlayerOg.satori.vue
   assets/css/                  # main.css + landing.css
 public/
-  favicon.svg, providers/      # Provider logos
+  mockups/now-playing-overview.png  # Hero — light + dark Now Playing overview
+  favicon.svg, providers/           # Provider logos
 LANDING_CONTENT.md             # Human-editable copy mirror (keep in sync with landing.ts)
 ```
 
@@ -88,7 +89,16 @@ LANDING_CONTENT.md             # Human-editable copy mirror (keep in sync with l
 1. Edit marketing copy in [LANDING_CONTENT.md](./LANDING_CONTENT.md) (planning / review).
 2. Apply the same strings in [app/content/landing.ts](./app/content/landing.ts) (what the app renders).
 
-Hero mockups are Vue components under `app/components/landing/mockups/`. To use screenshots instead, add images under `public/mockups/` and pass `image-src` to `LandingAppMockup`.
+### App mockups
+
+| Placement | Type | Source |
+| --- | --- | --- |
+| **Hero** | Screenshot (overview) | [`public/mockups/now-playing-overview.png`](./public/mockups/now-playing-overview.png) — light and dark Now Playing side-by-side. Set via `landingHero.mockupImage` in [`app/content/landing.ts`](./app/content/landing.ts); rendered with `LandingAppMockup` (`presentation="overview"`, caption from `landingHero.mockupLabel`). |
+| **Features showcase** | Vue components | [`app/components/landing/mockups/`](./app/components/landing/mockups/) — Discover, Smart Mix, Now Playing, Library |
+
+To change the hero image, replace `public/mockups/now-playing-overview.png` (or update `landingHero.mockupImage` if using another path).
+
+To use screenshots on a feature tile instead of a Vue mockup, add PNGs under `public/mockups/` and map the screen in `landingMockupImages` in `app/content/landing.ts`.
 
 Provider logos live in `public/providers/` (monochrome SVGs).
 
