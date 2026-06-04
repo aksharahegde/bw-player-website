@@ -1,6 +1,6 @@
 # BW Player Website
 
-Marketing landing page for [BW Player](../bw-player) — built with Nuxt 4 and [@nuxtjs/seo](https://nuxtseo.com/).
+Marketing landing page for [BW Player](../bw-player), built with Nuxt 4 and [@nuxtjs/seo](https://nuxtseo.com/).
 
 ## Setup
 
@@ -35,4 +35,14 @@ Placeholder UI mocks live in `app/components/landing/mockups/`. Drop real screen
 
 ## SEO
 
-`@nuxtjs/seo` provides sitemap, robots, schema.org, and meta tags. OG image generation is disabled (`ogImage.enabled: false`) until a renderer is configured.
+`@nuxtjs/seo` provides sitemap, robots, schema.org, meta tags, and Satori OG images (`BwPlayerOg` template).
+
+Set `NUXT_PUBLIC_SITE_URL` for canonical URLs, sitemap, Open Graph, and JSON-LD `@id` links.
+
+Optional env vars (see `.env.example`): `NUXT_PUBLIC_TWITTER_SITE`, store URLs for schema `downloadUrl`.
+
+Regenerate PWA icons from the favicon after changing branding:
+
+```bash
+npx nuxt-seo-utils icons --source public/favicon.svg
+```

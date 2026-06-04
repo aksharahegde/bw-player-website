@@ -6,30 +6,34 @@
   --color-paper-2: #f4f3f8;
   --color-ink: #1a1b1f;
   --color-ink-2: #4c4546;
+  --color-ink-3: #7a7374;
   --color-rule: #e3e2e7;
   --color-primary: #000000;
   --color-on-primary: #ffffff;
   --color-glow: rgba(0, 0, 0, 0.04);
   --color-focus: #1a1b1f;
-  --shadow-ambient: 0 20px 50px rgba(0, 0, 0, 0.05);
-  --radius-xl: 1.5rem;
+  --shadow-ambient: 0 16px 40px rgba(0, 0, 0, 0.04);
+  --radius-xl: 1.25rem;
   --radius-pill: 9999px;
-  --font-body: 'Inter', system-ui, sans-serif;
+  --font-display: 'Newsreader', 'Iowan Old Style', 'Palatino Linotype', serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
   --space-2xs: 0.25rem;
   --space-xs: 0.5rem;
   --space-sm: 1rem;
   --space-md: 1.5rem;
   --space-lg: 2.5rem;
-  --space-xl: 4rem;
+  --space-xl: clamp(3rem, 6vw, 4.5rem);
+  --text-xs: 0.75rem;
   --text-sm: 0.875rem;
   --text-md: 1rem;
-  --text-lg: 1.5rem;
-  --text-xl: 2rem;
-  --text-hero: clamp(2.25rem, 5vw, 3.5rem);
+  --text-lg: 1.125rem;
+  --text-xl: clamp(1.5rem, 2.5vw, 1.875rem);
+  --text-hero: clamp(2.5rem, 5.5vw, 3.75rem);
   --dur-short: 150ms;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
-  --content-max: 72rem;
-  --content-pad: clamp(1.25rem, 4vw, 4rem);
+  --content-max: 68rem;
+  --content-pad: clamp(1.25rem, 4vw, 3rem);
+  --section-gap: var(--space-xl);
 }
 
 *,
@@ -47,9 +51,17 @@ body {
   background: var(--color-paper);
   color: var(--color-ink);
   font-family: var(--font-body);
+  font-size: var(--text-md);
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 
 a {
   color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 3px;
 }

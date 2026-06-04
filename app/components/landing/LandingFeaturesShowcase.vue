@@ -14,7 +14,7 @@ import {
       data-testid="landing-feature-discover"
     >
       <div class="bw-showcase-spotlight__copy">
-        <span class="bw-showcase-index">01</span>
+        <span class="bw-index">01</span>
         <h3 class="bw-showcase-spotlight__title">
           {{ landingFeatureSpotlight.title }}
         </h3>
@@ -43,8 +43,8 @@ import {
           variant="compact"
           :test-id="`landing-mockup-${feature.screen}`"
         />
-        <div class="bw-showcase-tile__copy">
-          <span class="bw-showcase-index">{{ String(index + 2).padStart(2, '0') }}</span>
+        <div>
+          <span class="bw-index">{{ String(index + 2).padStart(2, '0') }}</span>
           <h3 class="bw-showcase-tile__title">
             {{ feature.title }}
           </h3>

@@ -8,35 +8,91 @@ import {
   landingMoods,
   landingNav,
   landingPlatforms,
-  landingSeo,
   landingSources,
 } from '~/content/landing'
 
 const year = new Date().getFullYear()
+const {
+  seo,
+  siteUrl,
+  featureList,
+  downloadUrls,
+  ids,
+  themeColor,
+  twitterSite,
+} = useLandingSeo()
+
+const logoUrl = computed(() => `${siteUrl.value}/favicon.svg`)
+
+const ogImagePaths = defineOgImage('BwPlayerOg', {
+  title: seo.ogTitle,
+  description: seo.ogDescription,
+})
+
+const ogImageUrl = computed(() => {
+  const path = ogImagePaths[0]
+  if (!path) return ''
+  if (path.startsWith('http')) return path
+  return `${siteUrl.value}${path.startsWith('/') ? path : `/${path}`}`
+})
 
 useSeoMeta({
-  title: landingSeo.title,
+  title: seo.title,
   titleTemplate: '%s',
-  description: landingSeo.description,
-  ogTitle: landingSeo.ogTitle,
-  ogDescription: landingSeo.ogDescription,
+  description: seo.description,
+  keywords: seo.keywords,
+  ogTitle: seo.ogTitle,
+  ogDescription: seo.ogDescription,
+  ogImageAlt: seo.ogImageAlt,
+  ogLocale: 'en_US',
+  ogType: 'website',
   twitterCard: 'summary_large_image',
+  twitterTitle: seo.twitterTitle,
+  twitterDescription: seo.twitterDescription,
+  twitterSite: twitterSite.value || undefined,
+  themeColor,
 })
 
 useSchemaOrg([
-  defineWebSite({
+  defineOrganization({
+    '@id': ids.value.organization,
     name: 'BW Player',
-    description: landingSeo.description,
+    url: siteUrl.value,
+    logo: logoUrl.value,
+  }),
+  defineWebSite({
+    '@id': ids.value.website,
+    name: 'BW Player',
+    url: siteUrl.value,
+    description: seo.description,
+    inLanguage: 'en',
+    publisher: { '@id': ids.value.organization },
   }),
   defineWebPage({
-    name: landingSeo.title,
-    description: landingSeo.description,
+    '@id': ids.value.webpage,
+    name: seo.title,
+    description: seo.description,
+    url: siteUrl.value,
+    isPartOf: { '@id': ids.value.website },
+    about: { '@id': ids.value.software },
+    primaryImageOfPage: ogImageUrl.value,
+    inLanguage: 'en',
   }),
   defineSoftwareApp({
+    '@id': ids.value.software,
     name: 'BW Player',
     applicationCategory: 'MusicApplication',
-    operatingSystem: 'Android, iOS, macOS',
-    description: landingSeo.description,
+    operatingSystem: ['Android', 'iOS', 'macOS'],
+    description: seo.description,
+    image: ogImageUrl.value,
+    screenshot: ogImageUrl.value,
+    featureList,
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+    },
+    ...(downloadUrls.value.length > 0 ? { downloadUrl: downloadUrls.value } : {}),
   }),
 ])
 
@@ -77,14 +133,14 @@ useSchemaOrg([
       class="bw-content bw-hero"
       data-testid="landing-hero"
     >
-      <div>
-        <p class="bw-hero-tag">
+      <div class="bw-hero__copy">
+        <p class="bw-eyebrow">
           {{ landingHero.eyebrow }}
         </p>
-        <h1 class="bw-hero-head">
+        <h1 class="bw-display">
           {{ landingHero.headline }}
         </h1>
-        <p class="bw-hero-sub">
+        <p class="bw-lead">
           {{ landingHero.subhead }}
         </p>
         <div class="bw-hero-actions">
@@ -98,6 +154,14 @@ useSchemaOrg([
             class="bw-btn bw-btn--secondary"
           >{{ landingHero.secondaryCta }}</a>
         </div>
+        <ul class="bw-hero-platforms">
+          <li
+            v-for="platform in landingPlatforms"
+            :key="platform"
+          >
+            {{ platform }}
+          </li>
+        </ul>
       </div>
       <LandingAppMockup
         screen="discover"
@@ -107,17 +171,9 @@ useSchemaOrg([
       />
     </header>
 
-    <div class="bw-content bw-platforms">
-      <span
-        v-for="platform in landingPlatforms"
-        :key="platform"
-        class="bw-platform-chip"
-      >{{ platform }}</span>
-    </div>
-
     <section
       id="features"
-      class="bw-content"
+      class="bw-content bw-section"
       data-testid="landing-features"
     >
       <div class="bw-section-head">
@@ -131,7 +187,7 @@ useSchemaOrg([
       <LandingFeaturesShowcase />
     </section>
 
-    <section class="bw-content">
+    <section class="bw-content bw-section">
       <div class="bw-section-head">
         <h2 class="bw-section-title">
           Curated Moods
@@ -152,17 +208,17 @@ useSchemaOrg([
             class="bw-mood-card__art"
             aria-hidden="true"
           />
-          <h3 style="margin: 0 0 0.25rem; font-size: 1.125rem; font-weight: 700">
+          <h3 class="bw-card-title">
             {{ mood.title }}
           </h3>
-          <p style="margin: 0; font-size: 0.875rem; color: var(--color-ink-2)">
+          <p class="bw-card-line">
             {{ mood.line }}
           </p>
         </article>
       </div>
     </section>
 
-    <section class="bw-content">
+    <section class="bw-content bw-section">
       <div class="bw-section-head">
         <h2 class="bw-section-title">
           {{ landingSources.title }}
@@ -173,9 +229,19 @@ useSchemaOrg([
           v-for="source in landingSources.items"
           :key="source.id"
           class="bw-source-card"
+          :data-testid="`landing-source-${source.id}`"
         >
-          <h3 class="bw-source-card__name">
-            {{ source.name }}
+          <h3 class="bw-source-card__brand">
+            <img
+              :src="source.logo"
+              alt=""
+              class="bw-source-card__logo"
+              width="24"
+              height="24"
+              loading="lazy"
+              decoding="async"
+            >
+            <span class="bw-source-card__name">{{ source.name }}</span>
           </h3>
           <p class="bw-source-card__line">
             {{ source.line }}
@@ -186,38 +252,36 @@ useSchemaOrg([
 
     <section
       id="download"
-      class="bw-content bw-download"
+      class="bw-content bw-section bw-section--tight"
       data-testid="landing-download-cta"
     >
-      <h2 class="bw-section-title">
-        {{ landingDownload.headline }}
-      </h2>
-      <p class="bw-section-line">
-        {{ landingDownload.subhead }}
-      </p>
-      <div class="bw-download__actions">
-        <a
-          href="#"
-          class="bw-btn bw-btn--primary"
-        >{{ landingDownload.android }}</a>
-        <a
-          href="#"
-          class="bw-btn bw-btn--secondary"
-        >{{ landingDownload.ios }}</a>
-        <a
-          href="#"
-          class="bw-btn bw-btn--secondary"
-        >{{ landingDownload.macos }}</a>
+      <div class="bw-download">
+        <h2 class="bw-section-title">
+          {{ landingDownload.headline }}
+        </h2>
+        <p class="bw-section-line">
+          {{ landingDownload.subhead }}
+        </p>
+        <div class="bw-download__actions">
+          <a
+            href="#"
+            class="bw-btn bw-btn--primary"
+          >{{ landingDownload.android }}</a>
+          <a
+            href="#"
+            class="bw-btn bw-btn--secondary"
+          >{{ landingDownload.ios }}</a>
+          <a
+            href="#"
+            class="bw-btn bw-btn--secondary"
+          >{{ landingDownload.macos }}</a>
+        </div>
       </div>
     </section>
 
     <footer class="bw-content bw-footer">
-      <p style="margin: 0 0 0.5rem">
-        © {{ year }} BW Player
-      </p>
-      <p style="margin: 0">
-        {{ landingFooter.tagline }}
-      </p>
+      <p>© {{ year }} BW Player</p>
+      <p>{{ landingFooter.tagline }}</p>
     </footer>
   </div>
 </template>

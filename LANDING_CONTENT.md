@@ -1,4 +1,4 @@
-# BW Player — Landing Page Copy
+# BW Player: Landing Page Copy
 
 Short, catchy phrases per section. Mirror in `app/content/landing.ts`.
 
@@ -8,8 +8,12 @@ Short, catchy phrases per section. Mirror in `app/content/landing.ts`.
 
 - **Title:** BW Player | Monochrome music, full color when it plays
 - **Description:** Stream, mix, and queue from Last.fm, Audius, or Jamendo. A calm player where album art is the only color on screen.
-- **OG Title:** BW Player — Listen in black and white
+- **OG Title:** BW Player | Listen in black and white
 - **OG Description:** Discover moods. Shape Smart Mixes. Own your library.
+- **OG Image Alt:** BW Player: monochrome music player for Android, iOS, and macOS
+- **Twitter Title:** BW Player | Listen in black and white
+- **Twitter Description:** Discover moods. Shape Smart Mixes. Own your library.
+- **Keywords:** BW Player, music player, monochrome, Last.fm, Audius, Jamendo, smart mix, playlists, Android, iOS, macOS
 
 ---
 
@@ -29,7 +33,7 @@ Short, catchy phrases per section. Mirror in `app/content/landing.ts`.
 - **Subhead:** Stream. Mix. Queue. Let the artwork breathe.
 - **Primary CTA:** Get the app
 - **Secondary CTA:** See the features
-- **Mockup label:** Discover — trending now, one tap away
+- **Mockup label:** Discover: trending now, one tap away
 
 ---
 

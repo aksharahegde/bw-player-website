@@ -2,8 +2,13 @@ export const landingSeo = {
   title: 'BW Player | Monochrome music, full color when it plays',
   description:
     'Stream, mix, and queue from Last.fm, Audius, or Jamendo. A calm player where album art is the only color on screen.',
-  ogTitle: 'BW Player — Listen in black and white',
+  ogTitle: 'BW Player | Listen in black and white',
   ogDescription: 'Discover moods. Shape Smart Mixes. Own your library.',
+  ogImageAlt: 'BW Player: monochrome music player for Android, iOS, and macOS',
+  twitterTitle: 'BW Player | Listen in black and white',
+  twitterDescription: 'Discover moods. Shape Smart Mixes. Own your library.',
+  keywords:
+    'BW Player, music player, monochrome, Last.fm, Audius, Jamendo, smart mix, playlists, Android, iOS, macOS',
 } as const
 
 export const landingNav = {
@@ -19,7 +24,7 @@ export const landingHero = {
   subhead: 'Stream. Mix. Queue. Let the artwork breathe.',
   primaryCta: 'Get the app',
   secondaryCta: 'See the features',
-  mockupLabel: 'Discover — trending now, one tap away',
+  mockupLabel: 'Discover: trending now, one tap away',
 } as const
 
 export const landingPlatforms = ['Android', 'iOS', 'macOS'] as const
@@ -81,9 +86,24 @@ export const landingMoods = [
 export const landingSources = {
   title: 'Your catalog. Your pick.',
   items: [
-    { id: 'lastfm', name: 'Last.fm', line: 'Charts and discovery from Last.fm' },
-    { id: 'audius', name: 'Audius', line: 'Open catalog, curated flow' },
-    { id: 'jamendo', name: 'Jamendo', line: 'Creative Commons, ready to stream' },
+    {
+      id: 'lastfm',
+      name: 'Last.fm',
+      line: 'Charts and discovery from Last.fm',
+      logo: '/providers/lastfm.svg',
+    },
+    {
+      id: 'audius',
+      name: 'Audius',
+      line: 'Open catalog, curated flow',
+      logo: '/providers/audius.svg',
+    },
+    {
+      id: 'jamendo',
+      name: 'Jamendo',
+      line: 'Creative Commons, ready to stream',
+      logo: '/providers/jamendo.svg',
+    },
   ],
 } as const
 
