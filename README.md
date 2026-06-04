@@ -2,7 +2,8 @@
 
 Marketing site for **BW Player** — a monochrome music player for Android, iOS, and macOS. Stream, mix, and queue from Last.fm, Audius, and Jamendo with a calm UI where album art is the only color on screen.
 
-**Repository:** [github.com/aksharahegde/bw-player-website](https://github.com/aksharahegde/bw-player-website)
+**Repository:** [github.com/aksharahegde/bw-player-website](https://github.com/aksharahegde/bw-player-website)  
+**Production:** [bwplayer.akshara.dev](https://bwplayer.akshara.dev)
 
 ## Stack
 
@@ -39,7 +40,7 @@ bun install
 cp .env.example .env
 ```
 
-Edit `.env` and set `NUXT_PUBLIC_SITE_URL` to your deployment URL (local dev can use `http://localhost:3000`).
+Edit `.env` and set `NUXT_PUBLIC_SITE_URL` to your deployment URL (production: `https://bwplayer.akshara.dev`; local dev can use `http://localhost:3000`).
 
 ## Scripts
 

@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   runtimeConfig: {
     public: {
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL ?? 'https://bwplayer.app',
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL ?? 'https://bwplayer.akshara.dev',
       twitterSite: process.env.NUXT_PUBLIC_TWITTER_SITE ?? '',
       androidStoreUrl: process.env.NUXT_PUBLIC_ANDROID_STORE_URL ?? '',
       iosStoreUrl: process.env.NUXT_PUBLIC_IOS_STORE_URL ?? '',
@@ -28,7 +28,7 @@ export default defineNuxtConfig({
     },
   },
   site: {
-    url: process.env.NUXT_PUBLIC_SITE_URL ?? 'https://bwplayer.app',
+    url: process.env.NUXT_PUBLIC_SITE_URL ?? 'https://bwplayer.akshara.dev',
     name: 'BW Player',
     description:
       'Monochrome music player. Stream, mix, and queue from Last.fm, Audius, or Jamendo.',
