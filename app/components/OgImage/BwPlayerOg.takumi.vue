@@ -26,18 +26,6 @@ withDefaults(
     "
   >
     <div style="display: flex; flex-direction: column; gap: 16px">
-      <p
-        style="
-          margin: 0;
-          font-size: 22px;
-          font-weight: 600;
-          letter-spacing: 0.14em;
-          text-transform: uppercase;
-          color: #4c4546;
-        "
-      >
-        Monochrome Studio
-      </p>
       <h1
         style="
           margin: 0;

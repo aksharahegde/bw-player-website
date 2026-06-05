@@ -28,7 +28,6 @@ Short, catchy phrases per section. Mirror in `app/content/landing.ts`.
 
 ## Hero
 
-- **Eyebrow:** Monochrome Studio
 - **Headline:** Sound, stripped to the essential.
 - **Subhead:** Stream. Mix. Queue. Let the artwork breathe.
 - **Primary CTA:** Get the app
@@ -73,7 +72,7 @@ Short, catchy phrases per section. Mirror in `app/content/landing.ts`.
 
 ### Design
 
-- **Title:** Monochrome Studio
+- **Title:** Design
 - **Line:** UI recedes. Music takes the stage.
 - **Mockup:** (text-only card)
 

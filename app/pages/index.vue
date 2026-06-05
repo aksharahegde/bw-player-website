@@ -130,9 +130,6 @@ useSchemaOrg([
       data-testid="landing-hero"
     >
       <div class="bw-hero__copy">
-        <p class="bw-eyebrow">
-          {{ landingHero.eyebrow }}
-        </p>
         <h1 class="bw-display">
           {{ landingHero.headline }}
         </h1>

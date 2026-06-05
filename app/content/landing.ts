@@ -22,7 +22,6 @@ export const landingNav = {
 } as const
 
 export const landingHero = {
-  eyebrow: 'Monochrome Studio',
   headline: 'Sound, stripped to the essential.',
   subhead: 'Stream. Mix. Queue. Let the artwork breathe.',
   primaryCta: 'Get the app',
@@ -74,7 +73,7 @@ export const landingFeatures: LandingFeature[] = [
   },
   {
     id: 'design',
-    title: 'Monochrome Studio',
+    title: 'Design',
     line: 'UI recedes. Music takes the stage.',
   },
 ]
